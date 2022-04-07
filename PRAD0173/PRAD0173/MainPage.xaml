@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0173.MainPage"
+             BackgroundImageSource="bg1.jpg">
+    <ScrollView>
+    <StackLayout Spacing="20">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenido Usuario" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Label Text="Seleccione una Opcion del Menu" FontSize="Title" Padding="30,10,30,10" TextColor="Black" BackgroundColor="#2196f3"/>
+
+            <Button Text="Lista de Pagos" x:Name="BtnLista" Clicked="BtnLista_Clicked" BorderColor="Black" ImageSource="Sales.png"/>
+            <Button Text="Agregar Pago" x:Name="BtnAgregar" Clicked="BtnAgregar_Clicked" BorderColor="Black" ImageSource="add.png"/>
+            <Button Text="Eliminar Pago" x:Name="BtnEliminar" Clicked="BtnEliminar_Clicked" BorderColor="Black" ImageSource="delete.png"/>
+            <Button Text="Modificar Pago" x:Name="BtnModificar" Clicked="BtnModificar_Clicked" BorderColor="Black" ImageSource="Edit.png"/>
+            <Button Text="Hacerca del Creador" x:Name="BtnAcerca" Clicked="BtnAcerca_Clicked" BorderColor="Black" ImageSource="User.png"/>
+            <Button Text="Salir" x:Name="BtnSalir" Clicked="BtnSalir_Clicked" BorderColor="Black" ImageSource="exit.png"/>
+        
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
