@@ -16,5 +16,10 @@ namespace PRAD0173.Views
         {
             InitializeComponent();
         }
+
+        private void ListaPagos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using PRAD0173.Views;
 
 namespace PRAD0173
 {
@@ -15,9 +16,9 @@ namespace PRAD0173
             InitializeComponent();
         }
 
-        private void BtnLista_Clicked(object sender, EventArgs e)
+        private async void BtnLista_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new PagosListView());
         }
 
         private void BtnAgregar_Clicked(object sender, EventArgs e)

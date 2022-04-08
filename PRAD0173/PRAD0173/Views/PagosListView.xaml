@@ -5,8 +5,23 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            
-            <Entry />
+
+                <CollectionView x:Name="ListaPagos" Margin="25" SelectionMode="Single" SelectionChanged="ListaPagos_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding ID}"/>
+                                <Label Text="{Binding Descripcion}"/>
+                                <Label Text="{Binding Monto}"/>
+                                <Label Text="{Binding FechaRegistro}"/>
+                                <Image Source="{Binding Foto, Converter={StaticResource BytetoImage}}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             
         </StackLayout>
         </ScrollView>
