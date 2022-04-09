@@ -24,6 +24,7 @@ namespace PRAD0173.Views
             InitializeComponent();
         }
 
+        //copia la foto al memory stream como bytes
         private Byte[] traeImagenByteArray()
         {
             if (photo != null)
@@ -64,6 +65,7 @@ namespace PRAD0173.Views
             }
         }
 
+        //Metodo para tomar la foto
         private async void BtnFoto_Clicked(object sender, EventArgs e)
         {
             photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
