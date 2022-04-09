@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0173.Views.AddPagoView"
+             BackgroundImageSource="bg1.jpg">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige" Padding="5,5,5,5" Margin="10">
+            <Label Text="Agregar Un Pago" BackgroundColor="AliceBlue" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label Text="Descripcion Del Pago"/>
+            <Entry Keyboard="Text" x:Name="TxtDesc" Placeholder="Descripcion"/>
+            <Label Text="Monto del Pago"/>
+            <Entry Keyboard="Numeric" x:Name="TxtMonto" Placeholder="Monto"/>
+            <Label Text="Fecha del Pago"/>
+            <DatePicker x:Name="TxtFecha" Format="dd/MM/yy" />
+            <Label Text="Agregar Foto (Opcional)"/>
+            <Image x:Name="Foto" BackgroundColor="White" WidthRequest="100" HeightRequest="170"/>
+            <Button x:Name="BtnFoto" Text="Tomar Foto" VerticalOptions="Center" Clicked="BtnFoto_Clicked"/>
+            <Button Text="Agregar Registro" FontSize="Medium" x:Name="BtnAgregarCont" Clicked="BtnAgregarCont_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

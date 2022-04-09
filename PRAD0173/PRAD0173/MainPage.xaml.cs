@@ -21,29 +21,29 @@ namespace PRAD0173
             await Navigation.PushAsync(new PagosListView());
         }
 
-        private void BtnAgregar_Clicked(object sender, EventArgs e)
+        private async void BtnAgregar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new AddPagoView());
         }
 
-        private void BtnEliminar_Clicked(object sender, EventArgs e)
+        private async void BtnEliminar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new PagosEliminarView());
         }
 
-        private void BtnModificar_Clicked(object sender, EventArgs e)
+        private async void BtnModificar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new PagosEditView());
         }
 
-        private void BtnAcerca_Clicked(object sender, EventArgs e)
+        private async void BtnAcerca_Clicked(object sender, EventArgs e)
         {
-
+            await DisplayAlert("Universidad Cristiano Evangelica Nuevo Milenio","Estudiante: Daniel Emilio Martinez #Cuenta: 120450173","Nice");
         }
 
-        private void BtnSalir_Clicked(object sender, EventArgs e)
+        private async void BtnSalir_Clicked(object sender, EventArgs e)
         {
-
+            await DisplayAlert("Ups","No supe como programar el cerrar","Ni modo");
         }
     }
 }

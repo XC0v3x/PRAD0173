@@ -1,10 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PRAD0173.Views.PagosListView">
+             x:Class="PRAD0173.Views.PagosListView"
+             BackgroundImageSource="bg1.jpg"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Convertidor="clr-namespace:PRAD0173.Controllers">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="avatarImage">calendar.png</x:String>
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+            <Convertidor:ByteToImage x:Key="BytetoImage"/>
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+            <xct:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Eliminar Registro" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
+            <StackLayout BackgroundColor="Beige" Padding="5,5,5,5" Margin="10">
 
                 <CollectionView x:Name="ListaPagos" Margin="25" SelectionMode="Single" SelectionChanged="ListaPagos_SelectionChanged">
                     <CollectionView.ItemsLayout>
@@ -17,13 +38,12 @@
                                 <Label Text="{Binding Descripcion}"/>
                                 <Label Text="{Binding Monto}"/>
                                 <Label Text="{Binding FechaRegistro}"/>
-                                <Image Source="{Binding Foto, Converter={StaticResource BytetoImage}}"/>
+                                <Image Source="{Binding Foto,Converter={StaticResource BytetoImage}}"/>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            
-        </StackLayout>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

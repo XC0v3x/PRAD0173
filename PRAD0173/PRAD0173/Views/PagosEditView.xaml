@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRAD0173.Views.PagosEditView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ingrese el ID del pago a Modificar" FontSize="Medium"/>
+            <Entry Keyboard="Numeric" x:Name="TxtIdBus" Placeholder="ID del Pago"/>
+            <Button Text="Buscar" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked" FontSize="Medium"/>
+            <Label Text="---------------------------------------------------------------------------" FontSize="Medium"/>
+
+            <Label Text="Descripcion Del Pago"/>
+            <Entry Keyboard="Text" x:Name="TxtDesc" Placeholder="Descripcion" IsEnabled="False"/>
+            <Label Text="Monto del Pago"/>
+            <Entry Keyboard="Numeric" x:Name="TxtMonto" Placeholder="Monto" IsEnabled="False"/>
+            <Label Text="Fecha del Pago"/>
+            <DatePicker x:Name="TxtFecha" Format="dd/MM/yy" IsEnabled="False"/>
+            <Label Text="Agregar Foto (Opcional)"/>
+            <Image x:Name="Foto" BackgroundColor="White" WidthRequest="100" HeightRequest="170"/>
+            <Button x:Name="BtnFoto" Text="Agregar Foto" VerticalOptions="Center" Clicked="BtnFoto_Clicked" IsEnabled="False"/>
+            <Button x:Name="BtnActualizar" Text="Actualizar Registro" Clicked="BtnActualizar_Clicked" IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
